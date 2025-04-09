@@ -50,7 +50,7 @@ Sistema desenvolvido para gerenciamento de clientes e faturamento de uma empresa
 3. Configure as variáveis de ambiente:
 
    - Crie um arquivo `.env` na raiz do projeto
-   - Adicione as credenciais do Firebase
+   - Adicione as credenciais do Supabase
 
 4. Inicie o servidor de desenvolvimento:
    ```bash
