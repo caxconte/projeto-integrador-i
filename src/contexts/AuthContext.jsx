@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from "react";
-import { supabase } from "../services/supabase";
+import { supabase } from "../services/clientManager";
 
 export const AuthContext = createContext();
 
@@ -43,6 +43,13 @@ export function AuthProvider({ children }) {
     try {
       const { data, error } = await supabase.auth.signInWithOAuth({
         provider: "google",
+        options: {
+          queryParams: {
+            access_type: "offline",
+            prompt: "consent",
+          },
+          redirectTo: window.location.origin,
+        },
       });
       if (error) throw error;
       return data;
