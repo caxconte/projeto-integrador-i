@@ -18,7 +18,7 @@ export const Home: React.FC = () => {
         style={(styles.container, { paddingLeft: 180 })}
       >
         <div>
-          <h5 className="mb-4" style={{ paddingLeft: 80 }}>
+          <h5 className="mb-4" style={{ paddingLeft: 150 }}>
             Olá {user?.user_metadata?.name || "Usuário"} 👋
           </h5>
         </div>
